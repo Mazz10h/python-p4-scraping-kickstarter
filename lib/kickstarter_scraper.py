@@ -12,6 +12,7 @@ def create_project_dict():
     html = ''
     with open('./fixtures/kickstarter.html') as file:
         html = file.read()
+
     kickstarter = BeautifulSoup(html, 'html.parser')
     projects = {}
     # Iterate through the projects
@@ -26,6 +27,3 @@ def create_project_dict():
     # return the projects dictionary
 
     return projects
-
-projects = create_project_dict()
-print(projects)
